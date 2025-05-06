@@ -578,6 +578,35 @@ wheels = [
 ]
 
 [[package]]
+name = "langchain-huggingface"
+version = "0.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "langchain-core" },
+    { name = "sentence-transformers" },
+    { name = "tokenizers" },
+    { name = "transformers" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a1/0f/8277d993d5307f06523e72c9bc8a505ed028f7b1c1e5276d8e89044b6036/langchain_huggingface-0.1.2.tar.gz", hash = "sha256:4a66d5c449298fd353bd84c9ed01f9bf4303bf2e4ffce14aab8c55c584eee57c", size = 16129, upload-time = "2024-10-31T18:56:53.894Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9d/f8/77a303ddc492f6eed8bf0979f2bc6db4fa6eb1089c5e9f0f977dd87bc9c2/langchain_huggingface-0.1.2-py3-none-any.whl", hash = "sha256:7de5cfcae32bfb6a99c084fc16176f02583a4f8d94febb6bb45bed5b34699174", size = 21251, upload-time = "2024-10-31T18:56:52.21Z" },
+]
+
+[[package]]
+name = "langchain-perplexity"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "openai" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/22/19/5a19364dcb67b2a818ee25b98f23f8b167cc42a0facec8a9c051d43b7b72/langchain_perplexity-0.1.1.tar.gz", hash = "sha256:eb802b6c8db45e6add7562a91550cde225e4dfb0f74880a67884f64ef81e533d", size = 10058, upload-time = "2025-04-15T18:10:43.035Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/95/0d/95da0b2103e2ad10e24e312475649e16ac7f0f4e4e867050cbcbe9a80a8d/langchain_perplexity-0.1.1-py3-none-any.whl", hash = "sha256:e2d61b797a37f2709039ae5a05bf12eca72372f83b5aa3916e995aac92c011f1", size = 8638, upload-time = "2025-04-15T18:10:41.819Z" },
+]
+
+[[package]]
 name = "langchain-text-splitters"
 version = "0.3.8"
 source = { registry = "https://pypi.org/simple" }
@@ -1165,10 +1194,11 @@ dependencies = [
     { name = "langchain" },
     { name = "langchain-community" },
     { name = "langchain-core" },
+    { name = "langchain-huggingface" },
+    { name = "langchain-perplexity" },
     { name = "langchain-text-splitters" },
     { name = "openai" },
     { name = "python-dotenv" },
-    { name = "sentence-transformers" },
     { name = "streamlit" },
     { name = "tiktoken" },
 ]
@@ -1180,10 +1210,11 @@ requires-dist = [
     { name = "langchain", specifier = ">=0.3.25" },
     { name = "langchain-community", specifier = ">=0.3.23" },
     { name = "langchain-core", specifier = ">=0.3.58" },
+    { name = "langchain-huggingface", specifier = ">=0.1.2" },
+    { name = "langchain-perplexity", specifier = ">=0.1.1" },
     { name = "langchain-text-splitters", specifier = ">=0.3.8" },
     { name = "openai", specifier = ">=1.77.0" },
     { name = "python-dotenv", specifier = ">=1.1.0" },
-    { name = "sentence-transformers", specifier = ">=4.1.0" },
     { name = "streamlit", specifier = ">=1.45.0" },
     { name = "tiktoken", specifier = ">=0.9.0" },
 ]
