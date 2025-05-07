@@ -59,12 +59,12 @@ def get_retriever():
 
     # 임베딩 및 백터스토어 생성
     # embedding = OpenAIEmbeddings()
-    embedding = UpstageEmbeddings(model='embedding-query')
-    # embedding = HuggingFaceEmbeddings(
-    #     model_name="jhgan/ko-sroberta-multitask",
-    #     model_kwargs = {'device': 'cpu'}, # 모델이 CPU에서 실행되도록 설정. GPU를 사용할 수 있는 환경이라면 'cuda'로 설정할 수도 있음
-    #     encode_kwargs = {'normalize_embeddings': True}, # 임베딩 정규화. 모든 벡터가 같은 범위의 값을 갖도록 함. 유사도 계산 시 일관성을 높여줌
-    # )         
+    #embedding = UpstageEmbeddings(model='embedding-query')
+    embedding = HuggingFaceEmbeddings(
+        model_name="jhgan/ko-sroberta-multitask",
+        model_kwargs = {'device': 'cpu'}, # 모델이 CPU에서 실행되도록 설정. GPU를 사용할 수 있는 환경이라면 'cuda'로 설정할 수도 있음
+        encode_kwargs = {'normalize_embeddings': True}, # 임베딩 정규화. 모든 벡터가 같은 범위의 값을 갖도록 함. 유사도 계산 시 일관성을 높여줌
+    )         
     database = FAISS.from_documents(documents=document_list, embedding=embedding)
     # database = Chroma.from_documents(documents=document_list, embedding=embedding, collection_name='chroma-tax', persist_directory="./chroma")
     
